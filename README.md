@@ -20,6 +20,21 @@ uninews_admin 是一个使用 Spring Boot 构建的爬虫管理系统。该系�
 - [贡献](#贡献)
 - [许可证](#许可证)
 
+
+## 项目文件夹结构
+
+uninews_admin
+-
+        |-- controller
+        |-- model
+        |-- repository
+        |-- service
+- controller：包含控制器类，用于处理HTTP请求和返回响应。-1
+- model：包含实体类（也称为模型类），用于表示数据模型。-4
+- repository：包含存储库接口（也称为数据访问对象），用于与数据库进行交互。-3
+- service：包含服务类，用于实现应用程序的业务逻辑。-2
+- resources：包含应用程序的资源文件，如配置文件、静态资源文件等。
+
 ## 特性
 
 - 启动和停止爬虫任务
