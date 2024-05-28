@@ -7,13 +7,12 @@ import java.util.Date;
 @Entity
 @Table(name = "article")
 public class Article {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "university_id")
-    private Long universityId;
+    private int universityId;
 
     private String title;
 
