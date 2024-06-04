@@ -17,10 +17,7 @@ public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
 
-    public List<Article> getArticleList(int page, int size, String sortField, String sortDirection) {
-        Sort sort = Sort.by(Sort.Direction.fromString(sortDirection), sortField);
-        Pageable pageable = PageRequest.of(page, size, sort);
-        Page<Article> articlePage = articleRepository.findAll(pageable);
-        return articlePage.getContent();
+    public Page<Article> getArticleList(Pageable pageable) {
+        return articleRepository.findAll(pageable);
     }
 }
