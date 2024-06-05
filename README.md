@@ -25,10 +25,19 @@ uninews_admin 是一个使用 Spring Boot 构建的爬虫管理系统。该系�
 
 uninews_admin
 -
-        |-- controller
-        |-- model
-        |-- repository
-        |-- service
+        |-- controller                                         --控制器类
+            |-- GetArticleListController                       --展示数据
+            |-- CrawlerTaskController                          --增加爬虫任务
+        |-- exception                                          --异常处理器
+        |-- model                                              --实体类
+            |-- CrawlerTask                                    --增加爬虫任务
+        |-- repository                                         --存储库接口
+            |-- ArticleRepository                              --展示数据
+            |-- CrawlerTaskRepository                          --增加爬虫数据
+        |-- service                                            --服务类
+            |-- ArticleService                                 --展示数据
+            |-- CrawlerTaskService                             --增加爬虫数据
+
 - controller：包含控制器类，用于处理HTTP请求和返回响应。-1
 - model：包含实体类（也称为模型类），用于表示数据模型。-4
 - repository：包含存储库接口（也称为数据访问对象），用于与数据库进行交互。-3
