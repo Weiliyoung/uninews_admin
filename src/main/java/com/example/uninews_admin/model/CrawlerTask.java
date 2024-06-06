@@ -6,16 +6,14 @@ import java.util.Date;
 import java.util.Map;
 
 @Entity
+@Table(name = "crawler_task")
 public class CrawlerTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private int id;
+    private Integer id;
 
     private String name;
-
     private String url;
-
     private String status;
 
     @Column(name = "create_time")
@@ -24,22 +22,11 @@ public class CrawlerTask {
     @Column(name = "update_time")
     private Date updateTime;
 
-    public CrawlerTask() {
-    }
-
-    public CrawlerTask(String name, String url, String status, Date createTime, Date updateTime) {
-        this.name = name;
-        this.url = url;
-        this.status = status;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

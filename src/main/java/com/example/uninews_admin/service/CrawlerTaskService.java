@@ -18,18 +18,23 @@ public class CrawlerTaskService {
         this.crawlerTaskRepository = crawlerTaskRepository;
     }
 
+    public CrawlerTask createTask(CrawlerTask crawlerTask) {
+        return crawlerTaskRepository.save(crawlerTask);
+    }
+
     public List<CrawlerTask> getAllTasks() {
         return crawlerTaskRepository.findAll();
     }
 
-    public CrawlerTask createTask(CrawlerTask crawlerTask) {
-        crawlerTask.setCreateTime(new Date());
-        crawlerTask.setUpdateTime(new Date());
-        return crawlerTaskRepository.save(crawlerTask);
+    public CrawlerTask getTaskById(Integer id) {
+        return crawlerTaskRepository.findById(id).orElse(null);
     }
 
     public CrawlerTask updateTask(CrawlerTask crawlerTask) {
-        crawlerTask.setUpdateTime(new Date());
         return crawlerTaskRepository.save(crawlerTask);
+    }
+
+    public void deleteTask(Integer id) {
+        crawlerTaskRepository.deleteById(id);
     }
 }
