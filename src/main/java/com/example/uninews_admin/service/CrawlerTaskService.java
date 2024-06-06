@@ -37,4 +37,9 @@ public class CrawlerTaskService {
     public void deleteTask(Integer id) {
         crawlerTaskRepository.deleteById(id);
     }
+
+    //根据学校名字查爬虫任务
+    public List<CrawlerTask> getCrawlerTaskByUniversityName(String universityName) {
+        return crawlerTaskRepository.findByUniversity_UniversityName(universityName);
+    }
 }

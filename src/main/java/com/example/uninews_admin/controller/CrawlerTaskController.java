@@ -42,4 +42,11 @@ public class CrawlerTaskController {
     public void deleteTask(@PathVariable Integer id) {
         crawlerTaskService.deleteTask(id);
     }
+
+    //根据学校名字查询爬虫任务
+    @GetMapping("/crawlerTaskByUniversity")
+    public List<CrawlerTask> getCrawlerTaskByUniversity(@RequestParam String universityName) {
+        return crawlerTaskService.getCrawlerTaskByUniversityName(universityName);
+    }
+
 }

@@ -33,4 +33,60 @@ public class University {
     // Getters and setters
     // Constructors
     // Other necessary methods
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(Long cityId) {
+        this.cityId = cityId;
+    }
+
+    public String getUniversityName() {
+        return universityName;
+    }
+
+    public void setUniversityName(String universityName) {
+        this.universityName = universityName;
+    }
+
+    public String getUniversityWebsiteUrl() {
+        return universityWebsiteUrl;
+    }
+
+    public void setUniversityWebsiteUrl(String universityWebsiteUrl) {
+        this.universityWebsiteUrl = universityWebsiteUrl;
+    }
+
+    public String getUniversityStartUrl() {
+        return universityStartUrl;
+    }
+
+    public void setUniversityStartUrl(String universityStartUrl) {
+        this.universityStartUrl = universityStartUrl;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 }

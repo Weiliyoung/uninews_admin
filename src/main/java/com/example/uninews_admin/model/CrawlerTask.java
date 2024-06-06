@@ -12,6 +12,10 @@ public class CrawlerTask {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ManyToOne
+    @JoinColumn(name = "university_id", referencedColumnName = "id")
+    private University university;
+
     private String name;
     private String url;
     private String status;
@@ -28,6 +32,14 @@ public class CrawlerTask {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public University getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(University university) {
+        this.university = university;
     }
 
     public String getName() {

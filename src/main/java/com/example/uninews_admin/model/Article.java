@@ -14,6 +14,8 @@ public class Article {
     @Column(name = "university_id")
     private int universityId;
 
+    private int crawler_task_id;
+
     private String title;
 
     private String source;
@@ -35,6 +37,10 @@ public class Article {
     @Column(name = "update_time")
     private Date updateTime;
 
+// Getters and setters
+    // Constructors
+    // Other necessary methods
+
     public int getId() {
         return id;
     }
@@ -49,6 +55,14 @@ public class Article {
 
     public void setUniversityId(int universityId) {
         this.universityId = universityId;
+    }
+
+    public int getCrawler_task_id() {
+        return crawler_task_id;
+    }
+
+    public void setCrawler_task_id(int crawler_task_id) {
+        this.crawler_task_id = crawler_task_id;
     }
 
     public String getTitle() {
@@ -122,7 +136,4 @@ public class Article {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
-// Getters and setters
-    // Constructors
-    // Other necessary methods
 }
