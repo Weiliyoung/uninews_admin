@@ -10,7 +10,7 @@ public class University {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "city_id")
     private Long cityId;
@@ -34,11 +34,11 @@ public class University {
     // Constructors
     // Other necessary methods
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CrawlerTaskRepository extends JpaRepository<CrawlerTask, Integer> {
-    List<CrawlerTask> findByUniversity_UniversityName(String universityName);
+    List<CrawlerTask> findByUniversityId(Integer universityId);
 }
+
